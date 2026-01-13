@@ -1,1 +1,9 @@
-<p>products works!</p>
+<button (click)="fetchUsers()">Fetch Users</button>
+
+<p *ngIf="loading()">Loading...</p>
+
+<ul>
+  <li *ngFor="let u of users()">
+    {{ u.name }} - ${{ u.email }}
+  </li>
+</ul>
